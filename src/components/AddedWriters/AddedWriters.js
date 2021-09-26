@@ -17,7 +17,7 @@ const AddedWriters = (props) => {
         <div>
             <h1>Writers Added :{addedWriters.length}</h1>
             <h2>Total books : {totalBooks}</h2>
-
+            <button className="btn-regular">Buy Books</button>
             <div>
                 {
                     addedWriters.map(writer => <SelectedWriter writer={writer}></SelectedWriter>)

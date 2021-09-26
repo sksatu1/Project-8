@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPenNib } from '@fortawesome/free-solid-svg-icons'
 import "./Writer.css"
 
 const Writer = (props) => {
@@ -11,7 +13,7 @@ const Writer = (props) => {
             <h3>books : {Books}</h3>
             <p>phone : {phone}</p>
             <p>Died : {Died}</p>
-            <button onClick={() => props.addWriterHandler(props.writer)} className="btn-regular">Add Writers</button>
+            <button onClick={() => props.addWriterHandler(props.writer)} className="btn-regular"><FontAwesomeIcon icon={faPenNib} /> Add Writers</button>
         </div>
     );
 };
