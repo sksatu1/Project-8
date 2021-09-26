@@ -1,4 +1,6 @@
 import React from 'react';
+import SelectedWriter from '../SelectedWriter/SelectedWriter';
+import Writer from '../Writer/Writer';
 import './AddedWriters.css'
 
 const AddedWriters = (props) => {
@@ -17,12 +19,13 @@ const AddedWriters = (props) => {
     }
     return (
         <div>
-            <h1>Writers Added :{props.addedWriters.length}</h1>
+            <h1>Writers Added :{addedWriters.length}</h1>
             <h2>Total books : {totalBooks}</h2>
 
-            <div className="selected-writer">
-                <div><img src={img} alt="" /></div>
-                <h2>{name}</h2>
+            <div>
+                {
+                    addedWriters.map(writer => <SelectedWriter writer={writer}></SelectedWriter>)
+                }
             </div>
         </div>
     );
