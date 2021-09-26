@@ -1,6 +1,7 @@
 .header-container{
-    background-color: rgb(212, 178, 129);
+    background-color: #d4c4ab;
     color:brown;
     margin: 0 100px;
     border-radius: 10px;
+    padding: 10px;
 }
