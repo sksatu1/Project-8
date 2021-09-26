@@ -9,8 +9,6 @@ const Writers = () => {
 
     const [addedWriters, setAddedWriters] = useState([]);
 
-    const [selectedWriter, setSelectedWriter] = useState({});
-
     useEffect(() => {
         fetch('./writers.json')
             .then(res => res.json())
@@ -20,11 +18,9 @@ const Writers = () => {
 
     // add writer button handler ---------------------------------------------
     const addWriterHandler = (writer) => {
-        setSelectedWriter(writer);
         const newaddedWriters = [...addedWriters, writer];
         setAddedWriters(newaddedWriters)
     }
-    console.log('selected', selectedWriter);
 
     return (
         <div className="writers-container">
@@ -42,7 +38,6 @@ const Writers = () => {
             {/* writer cart ---------------------------- */}
             <div className="writers-added">
                 <AddedWriters
-                    selectedWriter={selectedWriter}
                     addedWriters={addedWriters} ></AddedWriters>
             </div>
         </div>

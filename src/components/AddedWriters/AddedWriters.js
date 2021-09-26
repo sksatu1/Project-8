@@ -1,13 +1,9 @@
 import React from 'react';
 import SelectedWriter from '../SelectedWriter/SelectedWriter';
-import Writer from '../Writer/Writer';
 import './AddedWriters.css'
 
 const AddedWriters = (props) => {
-    console.log('added : ', props)
-
-    // access selected items---------------------------------
-    const { name, img } = props.selectedWriter;
+    // console.log('added : ', props)
 
     // access all the added writers -------------------------
     const { addedWriters } = props;
